@@ -5,10 +5,8 @@ import { useRouter } from 'next/router'
 import css from './styles.module.css'
 import { AppRoutes } from '@/config/routes'
 import packageJson from '../../../../package.json'
-import AppstoreButton from '../AppStoreButton'
 import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
-import { IS_OFFICIAL_HOST } from '@/config/constants'
 
 const footerPages = [
   AppRoutes.welcome,
@@ -44,41 +42,25 @@ const Footer = (): ReactElement | null => {
   return (
     <footer className={css.container}>
       <ul>
-        {IS_OFFICIAL_HOST ? (
-          <>
-            <li>
-              <Typography variant="caption">&copy;2022–{new Date().getFullYear()} Core Contributors GmbH</Typography>
-            </li>
-            <li>
-              <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
-            </li>
-            <li>
-              <FooterLink href={getHref(AppRoutes.privacy)}>Privacy</FooterLink>
-            </li>
-            <li>
-              <FooterLink href={getHref(AppRoutes.licenses)}>Licenses</FooterLink>
-            </li>
-            <li>
-              <FooterLink href={getHref(AppRoutes.imprint)}>Imprint</FooterLink>
-            </li>
-            <li>
-              <FooterLink href={getHref(AppRoutes.cookie)}>Cookie policy</FooterLink>
-            </li>
-            <li>
-              <FooterLink href={getHref(AppRoutes.settings.index)}>Preferences</FooterLink>
-            </li>
-          </>
-        ) : (
+        <>
+          <li>
+            <Typography variant="caption">&copy;{new Date().getFullYear()} Fantom Foundation</Typography>
+          </li>
+          <li>
+            <FooterLink href="https://fantom.foundation/terms/">Terms</FooterLink>
+          </li>
+          <li>
+            <FooterLink href="https://fantom.foundation/privacy/">Privacy</FooterLink>
+          </li>
+          <li>
+            <FooterLink href={getHref(AppRoutes.cookie)}>Cookie Preferences</FooterLink>
+          </li>
           <li>{'This is an unofficial distribution of Safe{Wallet}'}</li>
-        )}
-
+        </>
         <li>
           <ExternalLink href={`${packageJson.homepage}/releases/tag/v${packageJson.version}`}>
             v{packageJson.version}
           </ExternalLink>
-        </li>
-        <li>
-          <AppstoreButton placement="footer" />
         </li>
       </ul>
     </footer>
