@@ -1,17 +1,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import NewSafe from '@/components/welcome/NewSafe'
+import NewSafeSocial from '@/components/welcome/NewSafeSocial'
 
-const Welcome: NextPage = () => {
+const SocialLogin: NextPage = () => {
   return (
     <>
       <Head>
         <title>{'Fantom Safe{Wallet} – Welcome'}</title>
       </Head>
 
-      <NewSafe />
+      <NewSafeSocial />
     </>
   )
 }
 
-export default Welcome
+export default SocialLogin

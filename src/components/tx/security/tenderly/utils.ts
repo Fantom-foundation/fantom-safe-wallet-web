@@ -58,7 +58,7 @@ export const getSimulation = async (
 }
 
 export const getSimulationLink = (simulationId: string): string => {
-  return `https://dashboard.tenderly.co/public/${TENDERLY_ORG_NAME}/${TENDERLY_PROJECT_NAME}/simulator/${simulationId}`
+  return `https://dashboard.tenderly.co/${TENDERLY_ORG_NAME}/${TENDERLY_PROJECT_NAME}/simulator/${simulationId}`
 }
 
 type SingleTransactionSimulationParams = {

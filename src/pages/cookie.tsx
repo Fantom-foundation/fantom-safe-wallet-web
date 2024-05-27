@@ -593,7 +593,7 @@ const CookiePolicy: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{'Safe{Wallet} – Cookie policy'}</title>
+        <title>{'Fantom Safe{Wallet} – Cookie policy'}</title>
       </Head>
 
       <main>{IS_OFFICIAL_HOST && <SafeCookiePolicy />}</main>
