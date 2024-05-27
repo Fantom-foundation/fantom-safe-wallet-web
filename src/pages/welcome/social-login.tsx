@@ -6,7 +6,7 @@ const SocialLogin: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{'Safe{Wallet} – Welcome'}</title>
+        <title>{'Fantom Safe{Wallet} – Welcome'}</title>
       </Head>
 
       <NewSafeSocial />
